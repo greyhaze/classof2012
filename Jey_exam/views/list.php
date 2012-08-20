@@ -1,9 +1,9 @@
 <html>
 <body>
+<h1>Days we ate together</h1>
 
 <form action='.' method='post' />
-	<input type='submit' name='add' value='add' />
-	<table border="1" cellpadding="4">
+	<table cellpadding="4">
 		<tr>
 		<th>Date</th>
 		<th>Members</th>
@@ -12,13 +12,16 @@
 
 foreach(Meals::find('all') as $oMeals){ ?>
 	<tr>
-	<td><?php echo $oMeals->date ?></td>
+	<td><?php echo date('Y-m-d', strtotime($oMeals->date)); ?></td>
 	<td><?php echo $oMeals->members ?></td>
 	</tr>
 <?php }?>
 		</table>
 
-	<input type='submit' name='add' value='add' />
+<p><label>date:</label><input type='text' name='date'/>
+<label>members:</label><input type='text' name='members'/>
+<input type='submit' name='submit' value='submit' /></p>
+
 </form>
 
 </body>

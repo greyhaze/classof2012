@@ -17,18 +17,10 @@ if(array_key_exists('submit', $_POST)){
 	$oMeals = new Meals();
 	$oMeals->date = $_POST['date'];
 	$oMeals->members = $_POST['members'];
-
+	
 	$oMeals->save();//saves the above information
 }
 
-if(array_key_exists('add', $_POST)){
-
-	include 'views/add.php';
-
-}else {
-
 	include 'views/list.php';
-
-}
 
 ?>
