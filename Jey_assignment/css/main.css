@@ -69,11 +69,15 @@ container a:link, a:hover, a:focus, a:visited {
 
 fieldset
 {
-	float: left;
 	border: 1px solid #000000;
+	border-radius: 8px;
 	width: 186px;
 	padding: 6px;
 	margin: 10px 4px 10px 0;
+	display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
 }
 
 legend {
@@ -83,7 +87,8 @@ legend {
 }
 
 .item {
-	background-color: #FF0;
+	padding-left: 4px;
+	background-color: #DDD;
 }
 
 .nav {
@@ -122,10 +127,14 @@ legend {
 	.minibox {
 		width: 342px;
 		padding: 2px 0px 2px 0px;
+		margin: 0;
 		background-color: #DDD;
 		text-align: center;
-		float: left;
-	}
+		display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        *display: inline;
+    }
 
 	.doublebox {
 		clear: left;
@@ -134,7 +143,10 @@ legend {
 		padding: 2px 0px 2px 0px;
 		background-color: #DDD;
 		text-align: center;
-		float: left;
+		display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        *display: inline;
 	}
 
 	.largebox {
@@ -144,10 +156,13 @@ legend {
 		padding: 2px 0px 2px 0px;
 		background-color: #DDD;
 		text-align: center;
-		float: left;
+		display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        *display: inline;
 	}
 
-	.name {
+	#name {
 		height: 30px;
 		margin: 0px 1px 0px 1px;
 		background-color: #000;
@@ -158,7 +173,7 @@ legend {
 		text-align: center;
 	}
 
-	.size {
+	#size {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #000;
@@ -166,7 +181,7 @@ legend {
 		text-align: center;
 	}
 
-	.rarity {
+	#rarity {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #FFF;
@@ -174,115 +189,109 @@ legend {
 		text-align: center;
 	}
 
-	.type {
-		height: 14px;
+	#setnum {
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	#type {
 		margin: 0px 1px 0px 1px;
 		background-color: #BBB;
 		text-align: center;
 	}
 
-	.origin {
-		height: 14px;
+	#origin {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.race {
-		height: 14px;
+	#race {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	.gender {
-		height: 14px;
+	#gender {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.class {
-		height: 14px;
+	#class {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	.details {
+	#details {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.weapons {
-		height: 14px;
+	#weapons {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.armour {
-		height: 14px;
+	#armour {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.alts {
-		height: 14px;
+	#proxies {
 		margin: 0px 1px 0px 1px;
-		background-color: #EEE;
+		background-color: #C9F;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.entry {
+	#alts {
+		margin: 0px 1px 0px 1px;
+		background-color: #CCF;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	#entry {
 		margin: 0px 1px 0px 1px;
 		background-color: #99cc99;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.setnum {
-		height: 14px;
-		margin: 0px 1px 0px 1px;
-		background-color: #DDD;
-		text-align: center;
-	}
-
-	.setname {
-		height: 14px;
+	#setname {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	.productionline {
-		height: 14px;
+	#productionline {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.manufacturer {
-		height: 14px;
+	#manufacturer {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	.streetdate {
-		height: 14px;
+	#streetdate {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.sources {
+	#sources {
 		margin: 0px 1px 0px 1px;
 		padding-left: 4px;
 		background-color: #FF0;
@@ -291,7 +300,7 @@ legend {
 		text-align: left;
 	}
 
-	.stats {
+	#stats {
 		margin: 0px 1px 0px 1px;
 		background-color: #FC0;
 		font-weight: bold;

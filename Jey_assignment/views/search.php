@@ -26,14 +26,12 @@
 		<input type="checkbox" name="size" value="Huge" /> Huge 3x3<br />
 		<input type="checkbox" name="size" value="Gargantuan" /> Gargantuan 4x4<br />
 		<input type="checkbox" name="size" value="Colossal" /> Colossal 6x6<br />
-	</fieldset>
-	<fieldset><legend>RARITY: </legend>
+	</fieldset><fieldset><legend>RARITY: </legend>
 		<input type="checkbox" name="rarity" value="None" /> No Rarity<br />
 		<input type="checkbox" name="rarity" value="Common" /> Common<br />
 		<input type="checkbox" name="rarity" value="Uncommon" /> Uncommon<br />
 		<input type="checkbox" name="rarity" value="Rare" /> Rare<br />
-	</fieldset>
-	<fieldset><legend>TYPE: </legend>
+	</fieldset><fieldset><legend>TYPE: </legend>
 		<input type="checkbox" name="type" value="Aberration" /> Aberration<br />
 		<input type="checkbox" name="type" value="Construct" /> Construct<br />
 		<input type="checkbox" name="type" value="Giant" /> Giant<br />
@@ -43,24 +41,20 @@
 		<input type="checkbox" name="type" value="Outsider" /> Outsider<br />
 		<input type="checkbox" name="type" value="Plant" /> Plant<br />
 		<input type="checkbox" name="type" value="Plant" /> Undead<br />
-	</fieldset>
-	<fieldset><legend>PLACE OF ORIGIN: </legend>
+	</fieldset><fieldset><legend>PLACE OF ORIGIN: </legend>
 		<input type="checkbox" name="origin" value="Abyss" /> Abyss<br />
 		<input type="checkbox" name="origin" value="Hell" /> Hell<br />
 		<input type="checkbox" name="origin" value="Material Plane" /> Material Plane<br />
-	</fieldset>
-	<fieldset><legend>GENDER: </legend>
+	</fieldset><fieldset><legend>GENDER: </legend>
 		<input type="checkbox" name="gender" value="NA" /> NA<br />
 		<input type="checkbox" name="gender" value="Female" /> Female<br />
 		<input type="checkbox" name="gender" value="Male" /> Male<br />
-	</fieldset>
-	<fieldset><legend>CLASS: </legend>
+	</fieldset><fieldset><legend>CLASS: </legend>
 		<input type="checkbox" name="class" value="NA" /> NA<br />
 		<input type="checkbox" name="class" value="Cleric" /> Cleric<br />
 		<input type="checkbox" name="class" value="Fighter" /> Fighter<br />
 		<input type="checkbox" name="class" value="Wizard" /> Wizard<br />
-	</fieldset>
-	<fieldset><legend>WEAPONS: </legend>
+	</fieldset><fieldset><legend>WEAPONS: </legend>
 		<input type="checkbox" name="weapon" value="Unarmed" /> Unarmed<br />
 		<input type="checkbox" name="weapon" value="BowCrossbow" /> Bow/Crossbow<br />
 		<input type="checkbox" name="weapon" value="DualWielding" /> Dual Wielding<br />
@@ -68,46 +62,38 @@
 		<input type="checkbox" name="weapon" value="StaffWand" /> Staff/Wand/Scepter<br />
 		<input type="checkbox" name="weapon" value="SwordBoard" /> Sword/Board<br />
 		<input type="checkbox" name="weapon" value="TwoHanded" /> Two Handed Weapon<br />
-	</fieldset>
-	<fieldset><legend>ARMOUR: </legend>
+	</fieldset><fieldset><legend>ARMOUR: </legend>
 		<input type="checkbox" name="armour" value="Unarmoured" /> Unarmoured<br />
 		<input type="checkbox" name="armour" value="LightArmour" /> Light Armour<br />
 		<input type="checkbox" name="armour" value="MediumArmour" /> Medium Armour<br />
 		<input type="checkbox" name="armour" value="HeavyArmour" /> Heavy Armour<br />
-	</fieldset>
-	<fieldset><legend>MANUALS: </legend>
+	</fieldset><fieldset><legend>MANUALS: </legend>
 		<input type="checkbox" name="entry" value="FiendFolio" /> Fiend Folio<br />
 		<input type="checkbox" name="entry" value="MonsterManual" /> Monster Manual<br />
 		<input type="checkbox" name="entry" value="MonsterManual2" /> Monster Manual 2<br />
-	</fieldset>
-	<fieldset><legend>STATS: </legend>
+	</fieldset><fieldset><legend>STATS: </legend>
 		<input type="checkbox" name="stats" value="DDM" /> DDM<br />
 		<input type="checkbox" name="stats" value="DDM2" /> DDM2.0<br />
 		<input type="checkbox" name="stats" value="Heroscape" /> Heroscape<br />
-	</fieldset>
-	<fieldset><legend>SET: </legend>
+	</fieldset><fieldset><legend>SET: </legend>
 		<input type="checkbox" name="set" value="PFB_HaM" /> Heroes &amp; Monsters<br />
 		<input type="checkbox" name="set" value="PFB_RotR" /> Rise of the Runelords<br />
 		<input type="checkbox" name="set" value="PFB_SS" /> Shattered Star<br />
-	</fieldset>
-	<fieldset><legend>PRODUCTION LINE: </legend>
+	</fieldset><fieldset><legend>PRODUCTION LINE: </legend>
 		<input type="checkbox" name="productionline" value="DCM" /> Dungeon Crawler Minis (DCM)<br />
 		<input type="checkbox" name="productionline" value="DDM" /> Dungeon &amp; Dragons Miniatures (DDM)<br />
 		<input type="checkbox" name="productionline" value="PFB" /> Pathfinder Battles (PFB)<br />
-	</fieldset>
-	<fieldset><legend>MANUFACTURER: </legend>
+	</fieldset><fieldset><legend>MANUFACTURER: </legend>
 		<input type="checkbox" name="manufacturer" value="GVN" /> Gifted Vision inc. (GVN)<br />
 		<input type="checkbox" name="manufacturer" value="PZO" /> Paizo / WizKids (PZO)<br />
 		<input type="checkbox" name="manufacturer" value="WotC" /> Wizards of the Coast (WotC)<br />
-	</fieldset>
-	<fieldset><legend>STREET DATE BY YEAR: </legend>
+	</fieldset><fieldset><legend>STREET DATE BY YEAR: </legend>
 		<input type="checkbox" name="street" value="2012" /> 2012<br />
 		<input type="checkbox" name="street" value="2011" /> 2011<br />
 		<input type="checkbox" name="street" value="2010" /> 2010<br />
 	</fieldset>
 </div>
 </form>
-
 </body>
 
 </html>

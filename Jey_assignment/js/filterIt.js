@@ -13,6 +13,22 @@ var filterIt = function() {
 
 document.getElementById('filterIt').onclick = filterIt;
 
+var viewType = function() {
+	var elems = document.getElementsByTagName('div');
+	for (i = 0; i < elems.length; i++) {
+		if (elems[i].getAttribute('class') == 'hide'){
+			if(elems[i].style.display == "none"){
+				elems[i].style.display = "block";
+			}else{
+				elems[i].style.display = "none";
+			}
+		}
+	}
+}
+
+document.getElementById('viewType').onchange = viewType;
+
+window.onload = viewType;
 
 /*<div class="type">
 <div class="origin">
@@ -45,7 +61,4 @@ document.getElementById('filterIt').onclick = filterIt;
 		}
 	}
 }
-
-document.getElementById('viewType').onchange = viewType;
-
-//window.onload = viewType; */
+*/
