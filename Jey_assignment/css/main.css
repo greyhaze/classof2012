@@ -1,0 +1,298 @@
+/*
+	Website:  	PlastiCrypt.com
+	Developer:    Jey Legarie
+	Created On:	August 28th, 2012
+	Revised On:
+	CSS Version: 	3
+	
+	Related Files:
+		index.php
+*/
+
+/* ------------------ Reset ------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------ End Reset ------------------ */
+
+body {
+	font-family: verdana;
+	font-size: 10px;
+}
+
+container {
+	margin: 0 auto;
+	width: 1026px;
+}
+
+container a:link, a:hover, a:focus, a:visited {
+		color: #CC0000;
+	}
+
+.nav {
+	clear: left;
+	margin: 0 auto;
+	width: 1026px;
+}
+
+.search {
+	clear: left;
+	margin: 0 auto;
+	width: 1026px;
+	padding: 20px 0;
+}
+
+.gallery {
+	clear: left;
+	margin: 0 auto;
+	width: 1026px;
+}
+
+/* ------------------ Display ------------------ */
+
+	.minibox {
+		width: 342px;
+		padding: 2px 0px 2px 0px;
+		background-color: #DDD;
+		text-align: center;
+		float: left;
+	}
+
+	.doublebox {
+		clear: left;
+		text-align: left;
+		width: 684px;
+		padding: 2px 0px 2px 0px;
+		background-color: #DDD;
+		text-align: center;
+		float: left;
+	}
+
+	.largebox {
+		clear: left;
+		text-align: left;
+		width: 1026px;
+		padding: 2px 0px 2px 0px;
+		background-color: #DDD;
+		text-align: center;
+		float: left;
+	}
+
+	.name {
+		height: 30px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		font-size: 12px;
+		font-weight: bold;
+		padding-top: 12px;
+		text-align: center;
+	}
+
+	.size {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #000;
+		color: #FFF;
+		text-align: center;
+	}
+
+	.rarity {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #FFF;
+		color: #000;
+		text-align: center;
+	}
+
+	.gender {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	.race {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		text-align: center;
+	}
+
+	.class {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	.details {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	.weapons {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	.armour {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	.alts {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	.entry {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #99cc99;
+		padding-left: 4px;
+		text-align: left;
+	}
+
+	.stats {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	.set {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		text-align: center;
+	}
+
+	.productionline {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	.manufacturer {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #EEE;
+		text-align: center;
+	}
+
+	.streetdate {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
+		text-align: center;
+	}
+
+	.sources {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		padding-left: 4px;
+		background-color: #FFFF00;
+		color: #CC0000;
+		font-weight: bold;
+		text-align: left;
+	}
+
+/*	.stats {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		padding-left: 4px;
+		background-color: #ffcc00;
+		color: #000;
+		font-weight: bold;
+		text-align: left;
+	}*/
+		
+	.boxart {
+		background-color: #FFF;
+		border-left: 2px solid #DDD;
+	}
+			
+		.boxart p:first-child {
+			margin: 0px auto;
+			text-align: center;
+			height: 36px;
+			padding-top: 6px;
+			background-color: #EEE;
+			color: #CC0000;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		
+			
+		.description {
+			margin: 0px auto;
+			text-align: center;
+			height: 38px;
+			padding: 2px;
+			background-color: #EEE;
+			color: #000;
+		}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+	clear: left;
+	margin: 0 auto;
+	width: 1026px;
+	text-align: center;
+	padding: 30px 0;
+	background-color: #DDD;
+	color: #000;
+}
+		

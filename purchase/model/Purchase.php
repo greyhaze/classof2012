@@ -1,5 +1,5 @@
 <?php
-class Purchase extends ActiveRecordValue\Model{
+class Purchase extends ActiveRecord\Model{
 	
 }
 ?>
