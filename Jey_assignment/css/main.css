@@ -67,6 +67,25 @@ container a:link, a:hover, a:focus, a:visited {
 		color: #CC0000;
 	}
 
+fieldset
+{
+	float: left;
+	border: 1px solid #000000;
+	width: 186px;
+	padding: 6px;
+	margin: 10px 4px 10px 0;
+}
+
+legend {
+	margin-left: 10px;
+	text-indent: 2px;
+	font-size: 125%;
+}
+
+.item {
+	background-color: #FF0;
+}
+
 .nav {
 	clear: left;
 	margin: 0 auto;
@@ -79,6 +98,18 @@ container a:link, a:hover, a:focus, a:visited {
 	width: 1026px;
 	padding: 20px 0;
 }
+
+	#btn_search {
+		background: url('../views/images/main/btn_search.png') no-repeat;
+		height: 35px;
+		width: 35px;
+		position: relative;
+		top: 10px;
+	}
+	
+	#btn_search:hover {
+		background-position: 0 -35px;
+	}
 
 .gallery {
 	clear: left;
@@ -119,7 +150,8 @@ container a:link, a:hover, a:focus, a:visited {
 	.name {
 		height: 30px;
 		margin: 0px 1px 0px 1px;
-		background-color: #EEE;
+		background-color: #000;
+		color: #DDD;
 		font-size: 12px;
 		font-weight: bold;
 		padding-top: 12px;
@@ -142,7 +174,14 @@ container a:link, a:hover, a:focus, a:visited {
 		text-align: center;
 	}
 
-	.gender {
+	.type {
+		height: 14px;
+		margin: 0px 1px 0px 1px;
+		background-color: #BBB;
+		text-align: center;
+	}
+
+	.origin {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
@@ -156,17 +195,23 @@ container a:link, a:hover, a:focus, a:visited {
 		text-align: center;
 	}
 
-	.class {
+	.gender {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.details {
+	.class {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
+		text-align: center;
+	}
+
+	.details {
+		margin: 0px 1px 0px 1px;
+		background-color: #DDD;
 		padding-left: 4px;
 		text-align: left;
 	}
@@ -174,7 +219,7 @@ container a:link, a:hover, a:focus, a:visited {
 	.weapons {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
-		background-color: #DDD;
+		background-color: #EEE;
 		padding-left: 4px;
 		text-align: left;
 	}
@@ -182,7 +227,7 @@ container a:link, a:hover, a:focus, a:visited {
 	.armour {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
-		background-color: #EEE;
+		background-color: #DDD;
 		padding-left: 4px;
 		text-align: left;
 	}
@@ -190,27 +235,26 @@ container a:link, a:hover, a:focus, a:visited {
 	.alts {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
-		background-color: #DDD;
+		background-color: #EEE;
 		padding-left: 4px;
 		text-align: left;
 	}
 
 	.entry {
-		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #99cc99;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	.stats {
+	.setnum {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	.set {
+	.setname {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
@@ -239,12 +283,19 @@ container a:link, a:hover, a:focus, a:visited {
 	}
 
 	.sources {
-		height: 14px;
 		margin: 0px 1px 0px 1px;
 		padding-left: 4px;
-		background-color: #FFFF00;
-		color: #CC0000;
+		background-color: #FF0;
+		color: #C00;
 		font-weight: bold;
+		text-align: left;
+	}
+
+	.stats {
+		margin: 0px 1px 0px 1px;
+		background-color: #FC0;
+		font-weight: bold;
+		padding-left: 4px;
 		text-align: left;
 	}
 
