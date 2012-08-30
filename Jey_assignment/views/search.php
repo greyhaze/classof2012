@@ -13,7 +13,7 @@
 			<option value="full">Full View</option>
 		</select>
 		<label>Search: </label>
-		<input id="test" type="text" name="search" />
+		<input id="keyword" type="text" name="search" />
 		<input id="btn_search" type="image" src="" alt="Submit" width="35" height="35" name="action" value="search" />
 	</div>
 	<div class="item" style="display:block"></div>
@@ -33,6 +33,7 @@
 		<input type="checkbox" name="rarity" value="Rare" /> Rare<br />
 	</fieldset><fieldset><legend>TYPE: </legend>
 		<input type="checkbox" name="type" value="Aberration" /> Aberration<br />
+		<input type="checkbox" name="type" value="Animal" /> Animal<br />
 		<input type="checkbox" name="type" value="Construct" /> Construct<br />
 		<input type="checkbox" name="type" value="Giant" /> Giant<br />
 		<input type="checkbox" name="type" value="Humanoid" /> Humanoid<br />
@@ -40,7 +41,7 @@
 		<input type="checkbox" name="type" value="Monstrous Humanoid" /> Monstrous Humanoid<br />
 		<input type="checkbox" name="type" value="Outsider" /> Outsider<br />
 		<input type="checkbox" name="type" value="Plant" /> Plant<br />
-		<input type="checkbox" name="type" value="Plant" /> Undead<br />
+		<input type="checkbox" name="type" value="Undead" /> Undead<br />
 	</fieldset><fieldset><legend>PLACE OF ORIGIN: </legend>
 		<input type="checkbox" name="origin" value="Abyss" /> Abyss<br />
 		<input type="checkbox" name="origin" value="Hell" /> Hell<br />
