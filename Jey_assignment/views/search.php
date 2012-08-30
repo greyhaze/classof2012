@@ -4,7 +4,7 @@
 <html>
 <body>
 
-<form>
+<form action="." method="post">
 	<div class="filters">
 		<input type="button" value="Filters" id="filterIt" />
 		<select id="viewType">
