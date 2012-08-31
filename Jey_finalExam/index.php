@@ -15,17 +15,12 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
-class examfinal extends ActiveRecord\Model{
-
-}
-
-
 ?>
 
 <html>
 <body>
 
-Hello World!
+	<?php include('views/display.php');?>
 
 </body>
 </html>
