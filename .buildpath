@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="Jey_future_value"/>
+	<buildpathentry kind="src" path="Jey_present_value"/>
+	<buildpathentry kind="src" path="Jey_product_discount"/>
+	<buildpathentry kind="src" path="Jey_remove_gst"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
