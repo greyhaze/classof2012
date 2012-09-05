@@ -4,6 +4,19 @@ $footer='PlastiCrypt '.$today['year'].'&copy;, caretaker greyhaze.';
 $action = array_key_exists('action', $_POST)?$_POST['action']: '';
 $action = array_key_exists('action', $_GET)?$_GET['action']: $action;
 
+if ($action == "search"){
+	foreach($_POST['size']as $sz){
+		$s[]=$sz;
+	}
+	foreach($_POST['rarity']as $sz){
+		$r[]=$sz;
+	}
+	foreach($_POST['type']as $sz){
+		$t[]=$sz;
+	}
+}
+
+
 //setup database
 require '../ActiveRecord/ActiveRecord.php';
 
@@ -100,15 +113,17 @@ ActiveRecord\Config::initialize(function($cfg)
 			<div class="gallery">
 				<?php 
 					if($action=='search'){
+
+//						foreach(gallery::find('all', array('order' => 'setnum', 'conditions' => array('type = ?', $_POST['type']))) as $oGallery){
+						foreach(gallery::find('all', array('conditions' => array('type in (?) AND origin in (?)', array('animal', 'construct', 'humanoid'), array('abyss', 'hell', 'material plane')))) as $oGallery){
 						
-						foreach(gallery::find('all', array('order' => 'setnum', 'conditions' => array('type = ?', $_POST['type']))) as $oGallery){
-	
 							include('views/display_partial.php');
-					}
+						}//foreach
 					}else{
-						
+
 						include('views/display.php');
-				}?>
+
+					}?>
 			</div>
 			</div>
 			<!-- main -->

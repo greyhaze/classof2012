@@ -1,4 +1,11 @@
 <?php
+
+
+foreach(gallery::find('all', array('conditions' => array('type in (?) AND origin in (?)', array('aberration', 'construct', 'humanoid'), array('abyss', 'hell', 'material plane')))) as $oGallery){
+//	echo $oGallery->size;
+	}//foreach
+	
+
 ?>
 
 <html>
@@ -19,50 +26,50 @@
 	<div class="item" style="display:block"></div>
 	<div class="item" style="display:none">
 	<fieldset><legend>SIZE: </legend>
-		<input type="checkbox" name="size" value="Tiny" /> Tiny<br />
-		<input type="checkbox" name="size" value="Small" /> Small<br />
-		<input type="checkbox" name="size" value="Medium" /> Medium<br />
-		<input type="checkbox" name="size" value="Large" /> Large 2x2<br />
-		<input type="checkbox" name="size" value="Huge" /> Huge 3x3<br />
-		<input type="checkbox" name="size" value="Gargantuan" /> Gargantuan 4x4<br />
-		<input type="checkbox" name="size" value="Colossal" /> Colossal 6x6<br />
+		<input type="checkbox" name="size[]" value="tiny" /> Tiny<br />
+		<input type="checkbox" name="size[]" value="small" /> Small<br />
+		<input type="checkbox" name="size[]" value="medium" /> Medium<br />
+		<input type="checkbox" name="size[]" value="large" /> Large 2x2<br />
+		<input type="checkbox" name="size[]" value="huge" /> Huge 3x3<br />
+		<input type="checkbox" name="size[]" value="gargantuan" /> Gargantuan 4x4<br />
+		<input type="checkbox" name="size[]" value="colossal" /> Colossal 6x6<br />
 	</fieldset><fieldset><legend>RARITY: </legend>
-		<input type="checkbox" name="rarity" value="None" /> No Rarity<br />
-		<input type="checkbox" name="rarity" value="Common" /> Common<br />
-		<input type="checkbox" name="rarity" value="Uncommon" /> Uncommon<br />
-		<input type="checkbox" name="rarity" value="Rare" /> Rare<br />
+		<input type="checkbox" name="rarity" value="none" /> No Rarity<br />
+		<input type="checkbox" name="rarity" value="common" /> Common<br />
+		<input type="checkbox" name="rarity" value="uncommon" /> Uncommon<br />
+		<input type="checkbox" name="rarity" value="rare" /> Rare<br />
 	</fieldset><fieldset><legend>TYPE: </legend>
-		<input type="checkbox" name="type" value="Aberration" /> Aberration<br />
-		<input type="checkbox" name="type" value="Animal" /> Animal<br />
-		<input type="checkbox" name="type" value="Construct" /> Construct<br />
-		<input type="checkbox" name="type" value="Giant" /> Giant<br />
-		<input type="checkbox" name="type" value="Humanoid" /> Humanoid<br />
-		<input type="checkbox" name="type" value="Magical Beast" /> Magical Beast<br />
-		<input type="checkbox" name="type" value="Monstrous Humanoid" /> Monstrous Humanoid<br />
-		<input type="checkbox" name="type" value="Outsider" /> Outsider<br />
-		<input type="checkbox" name="type" value="Plant" /> Plant<br />
-		<input type="checkbox" name="type" value="Undead" /> Undead<br />
+		<input type="checkbox" name="type" value="aberration" /> Aberration<br />
+		<input type="checkbox" name="type" value="animal" /> Animal<br />
+		<input type="checkbox" name="type" value="construct" /> Construct<br />
+		<input type="checkbox" name="type" value="giant" /> Giant<br />
+		<input type="checkbox" name="type" value="humanoid" /> Humanoid<br />
+		<input type="checkbox" name="type" value="magical beast" /> Magical Beast<br />
+		<input type="checkbox" name="type" value="monstrous humanoid" /> Monstrous Humanoid<br />
+		<input type="checkbox" name="type" value="outsider" /> Outsider<br />
+		<input type="checkbox" name="type" value="plant" /> Plant<br />
+		<input type="checkbox" name="type" value="undead" /> Undead<br />
 	</fieldset><fieldset><legend>PLACE OF ORIGIN: </legend>
-		<input type="checkbox" name="origin" value="Abyss" /> Abyss<br />
-		<input type="checkbox" name="origin" value="Hell" /> Hell<br />
-		<input type="checkbox" name="origin" value="Material Plane" /> Material Plane<br />
+		<input type="checkbox" name="origin" value="abyss" /> Abyss<br />
+		<input type="checkbox" name="origin" value="hell" /> Hell<br />
+		<input type="checkbox" name="origin" value="material plane" /> Material Plane<br />
 	</fieldset><fieldset><legend>GENDER: </legend>
-		<input type="checkbox" name="gender" value="NA" /> NA<br />
-		<input type="checkbox" name="gender" value="Female" /> Female<br />
-		<input type="checkbox" name="gender" value="Male" /> Male<br />
+		<input type="checkbox" name="gender" value="na" /> NA<br />
+		<input type="checkbox" name="gender" value="female" /> Female<br />
+		<input type="checkbox" name="gender" value="male" /> Male<br />
 	</fieldset><fieldset><legend>CLASS: </legend>
-		<input type="checkbox" name="class" value="NA" /> NA<br />
-		<input type="checkbox" name="class" value="Cleric" /> Cleric<br />
-		<input type="checkbox" name="class" value="Fighter" /> Fighter<br />
-		<input type="checkbox" name="class" value="Wizard" /> Wizard<br />
+		<input type="checkbox" name="class" value="na" /> NA<br />
+		<input type="checkbox" name="class" value="cleric" /> Cleric<br />
+		<input type="checkbox" name="class" value="fighter" /> Fighter<br />
+		<input type="checkbox" name="class" value="wizard" /> Wizard<br />
 	</fieldset><fieldset><legend>WEAPONS: </legend>
-		<input type="checkbox" name="weapon" value="Unarmed" /> Unarmed<br />
-		<input type="checkbox" name="weapon" value="BowCrossbow" /> Bow/Crossbow<br />
-		<input type="checkbox" name="weapon" value="DualWielding" /> Dual Wielding<br />
-		<input type="checkbox" name="weapon" value="Exotic" /> Exotic Weapon<br />
-		<input type="checkbox" name="weapon" value="StaffWand" /> Staff/Wand/Scepter<br />
-		<input type="checkbox" name="weapon" value="SwordBoard" /> Sword/Board<br />
-		<input type="checkbox" name="weapon" value="TwoHanded" /> Two Handed Weapon<br />
+		<input type="checkbox" name="weapon" value="unarmed" /> Unarmed<br />
+		<input type="checkbox" name="weapon" value="bowcrossbow" /> Bow/Crossbow<br />
+		<input type="checkbox" name="weapon" value="dualwielding" /> Dual Wielding<br />
+		<input type="checkbox" name="weapon" value="exotic" /> Exotic Weapon<br />
+		<input type="checkbox" name="weapon" value="staffwand" /> Staff/Wand/Scepter<br />
+		<input type="checkbox" name="weapon" value="swordboard" /> Sword/Board<br />
+		<input type="checkbox" name="weapon" value="twohanded" /> Two Handed Weapon<br />
 	</fieldset><fieldset><legend>ARMOUR: </legend>
 		<input type="checkbox" name="armour" value="Unarmoured" /> Unarmoured<br />
 		<input type="checkbox" name="armour" value="LightArmour" /> Light Armour<br />
@@ -100,6 +107,23 @@
 </html>
 
 <!-- 
+	<legend>SIZE: </legend>
+	<legend>RARITY: </legend>
+	<legend>TYPE: </legend>
+	<legend>PLACE OF ORIGIN: </legend>
+	<legend>GENDER: </legend>
+	<legend>CLASS: </legend>
+	<legend>WEAPONS: </legend>
+	<legend>ARMOUR: </legend>
+	<legend>MANUALS: </legend>
+	<legend>STATS: </legend>
+	<legend>SET: </legend>
+	<legend>PRODUCTION LINE: </legend>
+	<legend>MANUFACTURER: </legend>
+	<legend>STREET DATE BY YEAR: </legend>
+
+
+
 	<div class="name">Alu Demon</div>
 	<img src="./views/images/pfb_02/alu_demon.jpg" alt="Demon woman with bat wings and skimpy clothes" />
 	<div class="size">Medium</div>
