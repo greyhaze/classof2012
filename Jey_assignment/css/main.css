@@ -122,6 +122,14 @@ legend {
 	width: 1026px;
 }
 
+
+.message {
+	padding: 20px;
+	font-size: 200%;
+	text-align: center;
+}
+
+
 /* ------------------ Display ------------------ */
 
 	.minibox {
