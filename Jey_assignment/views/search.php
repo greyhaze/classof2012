@@ -20,7 +20,7 @@ foreach(gallery::find('all', array('conditions' => array('type in (?) AND origin
 			<option value="full">Full View</option>
 		</select>
 		<label>Search: </label>
-		<input id="keyword" type="text" name="search" />
+		<input id="keyword" type="text" name="searchbox" />
 		<input id="btn_search" type="image" src="" alt="Submit" width="35" height="35" name="action" value="search" />
 	</div>
 	<div class="item" style="display:block"></div>

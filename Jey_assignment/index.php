@@ -221,14 +221,14 @@ if ($action == "search"){
 				<?php 
 					if($action=='search'){
 						if(isset($_POST['search'])){
-							echo $_POST['search'];
+							echo $_POST['searchbox'];
 						}
 						$flag = true;
-						foreach(gallery::find('all', array('conditions' => array('size in (?) AND rarity in (?) AND type in (?) AND origin in (?) AND gender in (?) AND class in (?) AND weapons in (?) AND armour in (?) AND setname in (?) AND productionline in (?) AND manufacturer in (?)', $s, $r, $t, $o, $g, $c, $w, $a, $set, $p, $f))) as $oGallery){
-						$flag = false;
-						include('views/display_partial.php');
+						foreach(gallery::find('all', array('order' => 'setnum', 'conditions' => array('size in (?) AND rarity in (?) AND type in (?) AND origin in (?) AND gender in (?) AND class in (?) AND weapons in (?) AND armour in (?) AND setname in (?) AND productionline in (?) AND manufacturer in (?)', $s, $r, $t, $o, $g, $c, $w, $a, $set, $p, $f))) as $oGallery){
+							$flag = false;
+							include('views/display_partial.php');
 						}//foreach
-						if($flag){ ?><p class="message">Nothing fits your criteria.</p>	<?php
+						if($flag){ ?><p class="message">Nothing available fits your search criteria.</p>	<?php
 						}
 					}else{
 
