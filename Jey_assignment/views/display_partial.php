@@ -13,23 +13,23 @@
 	<div id="weapons" class="hide"><?php echo $oGallery->weapons;?></div>
 	<div id="armour" class="hide"><?php echo $oGallery->armour;?></div>
  	<div id="alts" class="hide">Alternate Paint: 
-		<?php foreach(alternates::find('all', array('order' => 'label', 'conditions' => array('id_galleries = ?', $oGallery->id))) as $oAlternates){
+		<?php foreach(Alternate::find('all', array('order' => 'label', 'conditions' => array('gallery_id = ?', $oGallery->id))) as $oAlternates){
 		?><a href="<?php echo $oAlternates->link ?>" target="_blank"><?php echo $oAlternates->label ?></a> | <?php }?> </div>
-	<div id="proxies" class="hide">Proxies: 
-		<?php foreach(proxies::find('all', array('order' => 'label', 'conditions' => array('id_galleries = ?', $oGallery->id))) as $oProxies){
+ 	<div id="proxies" class="hide">Proxies: 
+		<?php foreach(Proxy::find('all', array('order' => 'label', 'conditions' => array('gallery_id = ?', $oGallery->id))) as $oProxies){
 		?><a href="<?php echo $oProxies->link ?>" target="_blank"><?php echo $oProxies->label ?></a> | <?php }?> </div>
 	<div id="entry" class="hide">
-		<?php foreach(entries::find('all', array('order' => 'source', 'conditions' => array('id_galleries = ?', $oGallery->id))) as $oEntry){
-		?><?php echo $oEntry->source ?>: <?php echo $oEntry->heading ?> (page<?php echo $oEntry->page ?>) <br /><?php }?> </div>
+		<?php foreach(Entry::find('all', array('order' => 'source', 'conditions' => array('gallery_id = ?', $oGallery->id))) as $oEntries){
+		?><?php echo $oEntries->source ?>: <?php echo $oEntries->heading ?> (page<?php echo $oEntries->page ?>) <br /><?php }?> </div>
 	<div id="setname" class="hide"><?php echo $oGallery->setname;?></div>
 	<div id="productionline" class="hide"><?php echo $oGallery->productionline;?></div>
 	<div id="manufacturer" class="hide"><?php echo $oGallery->manufacturer;?></div>
 	<div id="streetdate" class="hide">Street Date: <?php echo $oGallery->streetdate;?></div>
 	<div id="sources">
-		<?php foreach(sources::find('all', array('order' => 'label', 'conditions' => array('id_galleries = ?', $oGallery->id))) as $oSource){
-		?><a href="<?php echo $oSource->link ?>" target="_blank"><?php echo $oSource->label ?></a> | <?php }?> </div>
+		<?php foreach(Source::find('all', array('order' => 'label', 'conditions' => array('gallery_id = ?', $oGallery->id))) as $oSources){
+		?><a href="<?php echo $oSources->link ?>" target="_blank"><?php echo $oSources->label ?></a> | <?php }?> </div>
 	<div id="stats">
-		<?php foreach(stats::find('all', array('order' => 'label', 'conditions' => array('id_galleries = ?', $oGallery->id))) as $oStats){
+		<?php foreach(Stat::find('all', array('order' => 'label', 'conditions' => array('gallery_id = ?', $oGallery->id))) as $oStats){
 		?><a href="<?php echo $oStats->link ?>" target="_blank"><?php echo $oStats->label ?></a> | <?php }?>
 	</div>
 </div>
