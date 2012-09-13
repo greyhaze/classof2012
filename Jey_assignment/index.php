@@ -19,8 +19,6 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
-
-
 class Alternate extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
@@ -278,5 +276,6 @@ if ($action == "search"){
 
 <!-- JavaScript link -->
 <script src="js/filterIt.js"></script>
+
 
 </html>
