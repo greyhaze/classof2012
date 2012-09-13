@@ -24,28 +24,99 @@ ActiveRecord\Config::initialize(function($cfg)
 class Alternate extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
+//$oAlternates = Alternate::all(array('joins' => array('miniature')));
 
 class Entry extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
+//$oEntries = Entry::all(array('joins' => array('miniature')));
 
 class Proxy extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
+//$oProxies = Proxy::all(array('joins' => array('miniature')));
 
 class Source extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
+//$oSources = Source::all(array('joins' => array('miniature')));
 
 class Stat extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
+//$oStats = Stat::all(array('joins' => array('miniature')));
 
-$sSel = 'size_id, gender, streetdate';
-$oGallery = miniature::find('all', array('select' => $sSel));
+
+$sSel = 'gender, streetdate';
+$sJoin = 'LEFT JOIN entries e on(galleries.id = e.gallery_id)';
+$sJoin2 = 'LEFT JOIN stats st on(galleries.id = st.gallery_id)';
+$oGallery = gallery::find('all', array('select' => $sSel, 'joins'=>array($sJoin, $sJoin2)));
+//print_r($oAlternates);
+
+foreach($oGallery as $ogall){
+//	$s[] = $ogall->size;
+//	$r[] = $ogall->rarity;
+//	$t[] = $ogall->type;
+//	$o[] = $ogall->origin;
+	$g[] = $ogall->gender;
+//	$c[] = $ogall->class;
+//	$w[] = $ogall->weapons;
+//	$a[] = $ogall->armour;
+//	$set[] = $ogall->setname;
+//	$p[] = $ogall->productionline;
+//	$f[] = $ogall->manufacturer;
+//	$d[] = $ogall->streetdate;
+//	$e[] = $ogall->source;
+//	$st[] = $ogall->stat;
+}
+
+//$mast[]=$sx = $s;
+//$mast[]=$rx = $r;
+//$mast[]=$tx = $t;
+//$mast[]=$ox = $o;
+//$mast[]=$gx = $g;
+//$mast[]=$cx = $c;
+//$mast[]=$wx = $w;
+//$mast[]=$ax = $a;
+//$mast[]=$setx = $set;
+//$mast[]=$px = $p;
+//$mast[]=$fx = $f;
+//$mast[]=$dx = $d;
+//$mast[]=$ex = $e;
+//$mast[]=$stx = $st;
 
 $lbl = array('SIZE: ', 'RARITY: ', 'TYPE: ', 'PLACE OF ORIGIN: ', 'GENDER: ', 'CLASS: ', 'WEAPONS: ', 'ARMOUR: ', 'SET: ', 'PRODUCTION LINE: ', 'MANUFACTURER: ', 'STREET DATE BY YEAR: ', 'MANUALS: ', 'STATS: ');
 $nam = array('size', 'rarity', 'type', 'origin', 'gender', 'class', 'weapons', 'armour', 'setname', 'productionline', 'manufacturer', 'streetdate', 'source', 'stat');
+
+//for($i = 0; $i < count($mast); $i++){
+//	$tmp = array("");
+//	$cc = 0;
+//		for($j = 0; $j < count($mast[$i]); $j++){
+//			if(!array_search($mast[$i][$j], $tmp, true)){
+//				$cc++;
+//				$tmp[] = $mast[$i][$j];
+//			}
+//		}
+//	$order[] = $cc;
+//}
+
+//array_multisort($order,SORT_DESC,$mast,$lbl,$nam);
+
+$st[] = $e[] = $d[] = $f[] = $p[] = $set[] = $st[] = $m[] = $a[] = $w[] = $c[] = $g[] = $o[] = $t[] = $r[] = $s[] = 'NA';
+$s = array_unique($s);
+$r = array_unique($r);
+$t = array_unique($t);
+$o = array_unique($o);
+$g = array_unique($g);
+$c = array_unique($c);
+$w = array_unique($w);
+$a = array_unique($a);
+$set = array_unique($set);
+$p = array_unique($p);
+$f = array_unique($f);
+$d = array_unique($d);
+$e = array_unique($e);
+$st = array_unique($st);
 
 if ($action == "search"){
 	if(isset($_POST['size'])){
