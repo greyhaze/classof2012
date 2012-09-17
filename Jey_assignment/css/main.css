@@ -188,7 +188,7 @@ legend {
 		text-align: center;
 	}
 
-	#rarity {
+	[name=rarity] {
 		height: 14px;
 		margin: 0px 1px 0px 1px;
 		background-color: #FFF;
@@ -202,31 +202,31 @@ legend {
 		text-align: center;
 	}
 
-	#type {
+	[name=type] {
 		margin: 0px 1px 0px 1px;
 		background-color: #BBB;
 		text-align: center;
 	}
 
-	#origin {
+	[name=origin] {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	#race {
+	[name=race] {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	#gender {
+	[name=gender] {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	#class {
+	[name=class] {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
@@ -239,14 +239,14 @@ legend {
 		text-align: left;
 	}
 
-	#weapons {
+	[name=weapons] {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	#armour {
+	[name=armour] {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		padding-left: 4px;
@@ -267,32 +267,32 @@ legend {
 		text-align: left;
 	}
 
-	#entry {
+	[name=entries] {
 		margin: 0px 1px 0px 1px;
 		background-color: #99cc99;
 		padding-left: 4px;
 		text-align: left;
 	}
 
-	#setname {
+	[name=setname] {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	#productionline {
+	[name=productionline] {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;
 	}
 
-	#manufacturer {
+	[name=manufacturer] {
 		margin: 0px 1px 0px 1px;
 		background-color: #EEE;
 		text-align: center;
 	}
 
-	#streetdate {
+	[name=streetdate] {
 		margin: 0px 1px 0px 1px;
 		background-color: #DDD;
 		text-align: center;

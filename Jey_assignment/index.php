@@ -23,11 +23,47 @@ class Alternate extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
 
+class Armour extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
 class Entry extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
 
+class Gender extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Manufacturer extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Origin extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Productionline extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Profile extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
 class Proxy extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Rarity extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Setname extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Size extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
 
@@ -39,116 +75,78 @@ class Stat extends ActiveRecord\Model{
 	static $belongs_to = array(array('miniature'));
 }
 
-$sSel = 'size_id, gender, streetdate';
-$oGallery = miniature::find('all', array('select' => $sSel));
+class Type extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
 
-$lbl = array('SIZE: ', 'RARITY: ', 'TYPE: ', 'PLACE OF ORIGIN: ', 'GENDER: ', 'CLASS: ', 'WEAPONS: ', 'ARMOUR: ', 'SET: ', 'PRODUCTION LINE: ', 'MANUFACTURER: ', 'STREET DATE BY YEAR: ', 'MANUALS: ', 'STATS: ');
-$nam = array('size', 'rarity', 'type', 'origin', 'gender', 'class', 'weapons', 'armour', 'setname', 'productionline', 'manufacturer', 'streetdate', 'source', 'stat');
+class Weapon extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Entries_Miniature extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+class Stats_Miniature extends ActiveRecord\Model{
+	static $belongs_to = array(array('miniature'));
+}
+
+$lbl = array('SIZE: ', 'RARITY: ', 'TYPE: ', 'GENDER: ', 'PLACE OF ORIGIN: ', 'CLASS: ', 'WEAPONS: ', 'ARMOUR: ', 'SET: ', 'PRODUCTION LINE: ', 'MANUFACTURER: ', 'MANUALS: ', 'STATS: ');
+$cat = array('size', 'rarity', 'type', 'gender', 'origin', 'profile', 'weapon', 'armour', 'setname', 'productionline', 'manufacturer', 'entry', 'stat');
+$catmin = array('sizes.id', 'rarities.id', 'types.id', 'genders.id', 'origins.id', 'profiles.id', 'weapons.id', 'armours.id', 'setnames.id', 'productionlines.id', 'manufacturers.id', 'entries.id', 'stats.id');
+$cattab = array('size_id', 'rarity_id', 'type_id', 'gender_id', 'origin_id', 'profile_id', 'weapon_id', 'armour_id', 'setname_id', 'productionline_id', 'manufacturer_id', 'entry_id', 'stat_id');
+$catsort = array('1 desc', '1', '2 asc', '1', '2 asc', '1', '1', '1', '1', '2 asc', 'label', '2 asc', '1'); //1 = sort by id, 2 = sort by label
+$catjoin = array('', '', '', '', '', '', '', '', '', '', '', 'Entries_Miniature', 'Stats_Miniature');
+
+//streetdate
 
 if ($action == "search"){
-	if(isset($_POST['size'])){
-		$s='';
-		foreach($_POST['size']as $sz){
-			$s[]=$sz;
-		}
-	}
-	if(isset($_POST['rarity'])){
-		$r='';
-		foreach($_POST['rarity']as $sz){
-			$r[]=$sz;
-		}
-	}
-	if(isset($_POST['type'])){
-		$t='';
-		foreach($_POST['type']as $sz){
-			$t[]=$sz;
-		}
-	}
-	if(isset($_POST['origin'])){
-		$o='';
-		foreach($_POST['origin']as $sz){
-			$o[]=$sz;
-		}
-	}
-	if(isset($_POST['gender'])){
-		$g='';
-		foreach($_POST['gender']as $sz){
-			$g[]=$sz;
-		}
-	}
-	if(isset($_POST['class'])){
-		$c='';
-		foreach($_POST['class']as $sz){
-			$c[]=$sz;
-		}
-	}
-	if(isset($_POST['weapons'])){
-		$w='';
-		foreach($_POST['weapons']as $sz){
-			$w[]=$sz;
-		}
-	}
-	if(isset($_POST['armour'])){
-		$a='';
-		foreach($_POST['armour']as $sz){
-			$a[]=$sz;
-		}
-	}
-	if(isset($_POST['alternates'])){
-		$l='';
-		foreach($_POST['alternates']as $sz){
-			$l[]=$sz;
-		}
-	}
-	if(isset($_POST['entries'])){
-		$e='';
-		foreach($_POST['entries']as $sz){
-			$e[]=$sz;
-		}
-	}
-	if(isset($_POST['stats'])){
-		$st='';
-		foreach($_POST['stats']as $sz){
-			$st[]=$sz;
-		}
-	}
-	if(isset($_POST['setname'])){
-		$set='';
-		foreach($_POST['setname']as $sz){
-			$set[]=$sz;
-		}
-	}
-	if(isset($_POST['productionline'])){
-		$p='';
-		foreach($_POST['productionline']as $sz){
-			$p[]=$sz;
-		}
-	}
-	if(isset($_POST['manufacturer'])){
-		$f='';
-		foreach($_POST['manufacturer']as $sz){
-			$f[]=$sz;
-		}
-	}
-	if(isset($_POST['streetdate'])){
-		$d='';
-		foreach($_POST['streetdate']as $sz){
-			$d[]=$sz;
-		}
-	}
-	if(isset($_POST['source'])){
-		$e='';
-		foreach($_POST['source']as $sz){
-			$e[]=$sz;
-		}
-	}
-	if(isset($_POST['stat'])){
-		$st='';
-		foreach($_POST['stat']as $sz){
-			$st[]=$sz;
-		}
-	}
-}
+	$aSz = array();
+	foreach ($cat as $sCat){
+		if(isset($_POST[$sCat])){
+			$aRow = array();
+			$s='';
+			foreach($_POST[$sCat]as $s){
+				array_push($aRow, $s);				
+			}//end foreach
+			$aSz[$sCat] = $aRow;
+		}// end if
+	}//end foreach
+	
+	$sql = "";
+	for($i = 0; $i < count($cat); $i++){
+		$sField = $cat[$i];
+		if(array_key_exists($sField, $aSz)){
+			if ($sql != ''){
+				$sql.=' AND ';
+			}//end if
+			
+			$sKeys = '';
+			foreach($aSz[$sField] as $sValue){
+				if($sKeys != ''){
+					$sKeys .= ', ';
+				}
+				$sKeys .= $sValue;
+			}//end foreach
+			if($sField == 'entry' || $sField == 'stat'){
+				$sNewKeys = '';
+				foreach ($catjoin[$i]::find("all", array('conditions'=>array($cattab[$i] .' in (' . $sKeys .')'))) as $sMins){
+					if($sNewKeys != ''){
+						$sNewKeys .= ', ';
+					}//end if
+					$sNewKeys .= $sMins->miniature_id;
+				}//end foreach
+				if($sNewKeys != ""){
+					$sql .= 'id in (' . $sNewKeys .')';
+				}//end if
+			}else{
+				if($sKeys != ""){
+					$sql .= $cattab[$i].' in (' . $sKeys .')';
+				}//end if
+			}//end else
+		}//end if
+	}// end for
+}//end if
 
 ?>
 
@@ -234,7 +232,11 @@ if ($action == "search"){
 						if(isset($_POST['searchbox'])){
 							$box = $_POST['searchbox'];
 							$flag = true;
-							foreach(miniature::find('all', array('order' => 'setnum', 'conditions' => array("(name LIKE '%$box%' OR details LIKE '%$box%')".'AND size in (?) AND rarity in (?) AND type in (?) AND origin in (?) AND gender in (?) AND class in (?) AND weapons in (?) AND armour in (?) AND setname in (?) AND productionline in (?) AND manufacturer in (?) AND source in (?) AND st.label in (?)', $s, $r, $t, $o, $g, $c, $w, $a, $set, $p, $f, $e, $st))) as $oGallery){
+							$sBox = "(label LIKE '%$box%' OR details LIKE '%$box%')";
+								if($sql != ''){
+									$sBox.=' AND '.$sql;
+								}
+							foreach(miniature::find('all', array('order' => 'setnum', 'conditions' => array($sBox))) as $oGallery){
 								$flag = false;
 								include('views/display_partial.php');
 							}//foreach
@@ -245,7 +247,7 @@ if ($action == "search"){
 						}else{
 
 							$flag = true;
-							foreach(miniature::find('all', array('order' => 'setnum', 'conditions' => array('size in (?) AND rarity in (?) AND type in (?) AND origin in (?) AND gender in (?) AND class in (?) AND weapons in (?) AND armour in (?) AND setname in (?) AND productionline in (?) AND manufacturer in (?) AND source in (?) AND st.label in (?)', $s, $r, $t, $o, $g, $c, $w, $a, $set, $p, $f, $e, $st))) as $oGallery){
+							foreach(miniature::find('all', array('order' => 'setnum', 'conditions' => array($sql))) as $oGallery){
 								$flag = false;
 								include('views/display_partial.php');
 							}//foreach

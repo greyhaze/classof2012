@@ -14,10 +14,21 @@ var filterIt = function() {
 document.getElementById('filterIt').onclick = filterIt;
 
 var viewType = function() {
+	var sType = document.getElementById('viewType').value;
+	
 	var elems = document.getElementsByTagName('div');
 	for (i = 0; i < elems.length; i++) {
 		if (elems[i].getAttribute('class') == 'hide'){
-			if(elems[i].style.display == "none"){
+			
+			if(sType == 'full'){
+				elems[i].style.display = "block";
+			}else{
+				elems[i].style.display = "none";
+			}
+		}
+		else if (elems[i].getAttribute('class') == 'filter'){
+			
+			if(sType == 'filtered'){
 				elems[i].style.display = "block";
 			}else{
 				elems[i].style.display = "none";
